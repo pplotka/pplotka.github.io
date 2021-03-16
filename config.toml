@@ -11,10 +11,10 @@ copyright = "&copy; Copyright 2021, Paweł Płotka"
 # Main menu items
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    title = "About"
-    url = "/about/"
+    identifier = "about-me"
+    name = "About me"
+    title = "About me"
+    url = "/about-me/"
     weight = -110
   [[menu.main]]
     identifier = "posts"
@@ -31,10 +31,10 @@ copyright = "&copy; Copyright 2021, Paweł Płotka"
 
 # Configuration Features
 [params]
-  description = "Your meta description"      # Your meta description of the site
+  description = "Paweł Płotka - Software developer from Poland"      # Your meta description of the site
   header_title = "Paweł Płotka"                 # Your header title
   header_subtitle = "Software developer from Poland 🇵🇱" # Your header subtitle
-  home_image = "/images/avatar.png"          # Path to header image starting from the static directory
+  home_image = "/images/avatar.jpg"          # Path to header image starting from the static directory
   recent_posts = 5                           # Max amount of recent posts to show
   mainSections = ["posts", "post", "blog"]   # Main sections to include in recent posts
   [params.style]                             # CSS style overrides
