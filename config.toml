@@ -4,9 +4,16 @@ languageCode = "pl-pl"
 theme = "devise"
 relativeURLs = true
 enableEmoji = true
-googleAnalytics = ""
+googleAnalytics = "G-210TJGYC47"
 enableRobotsTXT = true
 copyright = "&copy; Copyright 2021, Paweł Płotka"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = false
+    respectDoNotTrack = true
+    useSessionStorage = true
 
 # Main menu items
 [menu]
