@@ -27,7 +27,7 @@ copyright = "&copy; Copyright 2021, Paweł Płotka"
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "/post/"
+    url = "/posts/"
     weight = -100
   [[menu.main]]
     identifier = "categories"
