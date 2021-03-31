@@ -24,10 +24,10 @@ copyright = "&copy; Copyright 2021, Paweł Płotka"
     url = "/about-me/"
     weight = -110
   [[menu.main]]
-    identifier = "posts"
+    identifier = "post"
     name = "Posts"
     title = "Posts"
-    url = "/posts/"
+    url = "/post/"
     weight = -100
   [[menu.main]]
     identifier = "categories"
