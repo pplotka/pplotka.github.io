@@ -58,7 +58,7 @@ copyright = "&copy; Copyright 2021, Paweł Płotka"
     href = "https://twitter.com/plotek1"
   [[params.social]]
     fa_icon = "fas fa-at fa-1x"
-    href = "mailto: contact@pplotka.dev"
+    href = "mailto: pawel@pplotka.pl"
   [[params.social]]
     fa_icon = "fas fa-key fa-1x"
     href = ""
