@@ -59,6 +59,3 @@ copyright = "&copy; Copyright 2021, Paweł Płotka"
   [[params.social]]
     fa_icon = "fas fa-at fa-1x"
     href = "mailto: pawel@pplotka.pl"
-  [[params.social]]
-    fa_icon = "fas fa-key fa-1x"
-    href = ""
