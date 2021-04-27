@@ -38,12 +38,12 @@ services:
 Few lines that require explanation:
 
 1. First of all, you have to override the application service (in our case, called `php` to run in `test_cashed` environment).
-2. For Chrome, we use `[zenika/alpine-chrome](https://github.com/Zenika/alpine-chrome)` image. You might use another one (but not all working correctly, this one is also well documented) or create your image (but it might be a waste of time).
+2. For Chrome, we use [zenika/alpine-chrome](https://github.com/Zenika/alpine-chrome) image. You might use another one (but not all working correctly, this one is also well documented) or create your image (but it might be a waste of time).
 3. It is necessary to change the shm size. Without this change, Chrome crashes during tests. So I suggest setting the `shm_size` option to `2gb`.
 4. The next thing worth noting is the command for the Chrome container. I use the same command as is used in the [Sylius CI configuration](https://github.com/Sylius/Sylius/blob/master/.github/workflows/application.yml#L387).
 5. Last but not least is setting the correct volume. It is very important, and remembering about it might save your time for debugging a problem. It is necessary to upload files in the scenario's steps. Without this line, your test execution returns timeout for all scenarios placed after that one that tries to upload a file. In my example, I share all codebases, but it is possible to share the only directory with fixtures.
 
-The second file we should change is `behat.yaml`. We have to configure the MinkExtension (so we focus only on the `Behat\\MinkExtension` section in this file) base_url option.  In our case, the correct value is [`http://nginx/`](http://nginx/) (it points to the entry point of our application).
+The second file we should change is `behat.yaml`. We have to configure the MinkExtension's (so we focus only on the `Behat\\MinkExtension` section in this file) `base_url` option.  In our case, the correct value is [`http://nginx/`](http://nginx/) (it points to the entrypoint of our application).
 Because we run Chrome Headless as a service in a container (instead of the same machine or container as an application), there is also necessary to change the option of `chrome_headless` sessions. This option refers to url to Chrome API, and for us, it is `http://chrome:9222`.
 
 That's all. It's time for testing. For this purpose, run the command below:
@@ -51,5 +51,7 @@ That's all. It's time for testing. For this purpose, run the command below:
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.behat.yml exec php vendor/bin/behat --colors --strict --no-interaction -vvv -f progress -f pretty --tags="@javascript && ~@todo && ~@cli"
 ```
+
+{{< callout emoji="💡" text="You might use composer's script or Makefile to alias long commands." >}}
 
 I hope that this configuration allows you to speed up your test, especially in CI (I wish to show you a comparison of Selenium and Chrome Headless in the next blog post).
