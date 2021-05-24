@@ -11,7 +11,7 @@ tags:
   - behat
 ---
 
-Since this [PR](https://github.com/Sylius/Sylius/pull/11505), Sylius has started using Chrome Headless to run their Behat scenarios tagged with `@javascript` (scenarios that require Javascript engine to run correctly - in short, Javascript suits). After the implementation of this change, it turned out that Javascript suits had sped up from 13 minutes to 8.5 minutes. So, I decided also to run my Javascript suit using Chrome Headless. However, there was one problem, namely my whole environment (development, test on the local machine, and test in CI) is based on on Docker. Until now, I’ve been using Selenium image to run Chrome. This short post shows you how to configure your Docker environment to work with Chrome Headless.
+Since this [PR](https://github.com/Sylius/Sylius/pull/11505), Sylius has started using Chrome Headless to run their Behat scenarios tagged with `@javascript` (scenarios that require Javascript engine to run correctly - in short, Javascript suits). After the implementation of this change, it turned out that Javascript suits had sped up from 13 minutes to 8.5 minutes. So, I decided also to run my Javascript suit using Chrome Headless. However, there was one problem, namely my whole environment (development, test on the local machine, and test in CI) is based on Docker. Until now, I’ve been using Selenium image to run Chrome. This short post shows you how to configure your Docker environment to work with Chrome Headless.
 
 {{< callout emoji="💡" text="You might see this [blog post](https://dev.to/kayneth/how-to-test-your-sylius-plugins-with-selenium-38ci) when you still want to use Selenium with Docker for Javascript suits." >}}
 
